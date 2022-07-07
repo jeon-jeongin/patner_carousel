@@ -13,7 +13,7 @@
 
 .title_container {
     text-align: center;
-    margin: 8rem 0 3rem 0;
+    margin: 6rem 0 3rem 0;
 }
 
 .title {
@@ -29,13 +29,16 @@
 .gallery_items {
     width: 100%;
     display: flex;
+    position: absolute;
+    left: 0;
+    transition: left 0.5s ease-out;
 }
 
 .card {
     width: 280px;
     border: 1px solid #eaeaea;
     border-radius: 10px;
-    margin: 0 0.5rem;
+    margin: 0 10px;
     box-shadow: 3px 3px 3px 3px #efefef;
 }
 
@@ -74,3 +77,24 @@
     display: flex;
 }
 
+/* 캐러셀 버튼 */
+.controls {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.controls button{
+    width: 40px;
+    height: 40px;
+    background-color: #fefefe;
+    border-radius: 50%;
+    border: none;
+}

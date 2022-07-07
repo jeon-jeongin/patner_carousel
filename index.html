@@ -5,25 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>펫트너</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <section class="gallery">
         <div class="title_container">
-            <h1 class="title">
+            <div class="title">
                 지금 이 순간에도 많은 아이들이
                 <br/>
-                펫트너와 함께 하고 있어요
-            </h1>
+                <strong>펫트너와 함께 하고 있어요</strong>
+            </div>
         </div>
         <div class="post_container">
             <div class="controls">
-                <button>prev</button>
-                <button>next</button>
+                <button type="button" class="prev">prev</button>
+                <button type="button" class="next">next</button>
             </div>
             <ul class="gallery_items"></ul>
         </div>
     </section>
 
     <script src="js/api.js"></script>
+    <script src="js/button.js"></script>
 </body>
 </html>
