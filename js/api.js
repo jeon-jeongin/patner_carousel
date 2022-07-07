@@ -12,25 +12,36 @@ fetch(url)
             const pet = data.companion;
 
             let li = document.createElement('li');
+            li.className = "gallery_item";
 
             let card = document.createElement('div');
+            card.className = "card";
 
             let card_header = document.createElement('header');
+            card_header.className = "card_header";
             let user_content = document.createElement('div');
+            user_content.className = "user_content";
             let user_avatar = document.createElement('img');
-            let user_name = document.createElement('p');
+            user_avatar.className = "user_avatar";
+            let user_name = document.createElement('span');
+            user_name.className = "user_name";
 
             let card_img_content = document.createElement('div');
+            card_img_content.className = "card_img_content";
             let card_img = document.createElement('img');
+            card_img.className = "card_img";
 
             let card_footer = document.createElement('footer');
+            card_footer.className = "card_footer";
             let pet_content = document.createElement('div');
+            pet_content.className = "pet_content";
             let pet_name = document.createElement('p');
+            pet_name.className = "pet_name";
 
-            if (user.image === null) {
-                user_avatar.src = "./image/default_user.png";
-            } else {
+            if (user.image) {
                 user_avatar.src = `${user.image}`;
+            } else {
+                user_avatar.src = "./image/default_user.png";
             }
             user_name.innerText = `${user.name}`;
 
@@ -53,7 +64,6 @@ fetch(url)
 
             li.appendChild(card);
             ul.appendChild(li);
-
         });
     });
 
